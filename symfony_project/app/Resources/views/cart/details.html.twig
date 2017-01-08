@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h2 class="page-header">{{ item_details.name }}</h2>
+
+    <ul class="list-group">
+        <li class="list-group-item">Name : {{ item_details.name  }}</li>
+        <li class="list-group-item">Date : {{ item_details.timestamp | date('F j, Y, g:i a')   }}</li>
+        <li class="list-group-item">Description : {{ item_details.description  }}</li>
+        <li class="list-group-item">Category : {{ item_details.category  }}</li>
+    </ul>
+
+    <a href="{{ app.request.baseUrl }}" class="btn btn-default">Go Back</a>
+{% endblock %}

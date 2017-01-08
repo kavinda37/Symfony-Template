@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h2 class="page-header">Add Item</h2>
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    {{ form_widget(form.name) }}
+    {{ form_end(form) }}
+
+    {# renders all fields *and* the form start and end tags #}
+    {#{ form(form) }#}
+{% endblock %}
